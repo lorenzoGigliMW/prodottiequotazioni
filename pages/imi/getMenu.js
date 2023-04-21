@@ -1,5 +1,5 @@
-export async function getStaticProps() { 
-    const res = await fetch('https://peq.marketwall.test/rest/menu/getmenu?language=it');
+export async function getStaticProps(props) { 
+    const res = await fetch('https://peq.marketwall.test/rest/menu/getmenu?language=it');//+{props.language}
     const data = await res.json();
     return {
         props: {
@@ -10,10 +10,10 @@ export async function getStaticProps() {
 
 
 export async function getStaticPaths(context) {         
-    const res = await fetch('https://peq.marketwall.test/rest/menu/getmenu?language=it');
-    const data = await res.json();
-    const paths =data.map(language=>({
-        params:{language: data.language}
+    const res = await fetch('https://peq.marketwall.test/rest/menu/getmenu?language=it');//+{context.language}
+    const dati = await res.json();
+    const paths =dati.map(elem=>({
+        params:{language: elem.data.language}//    o     dati.language
     }));
 
     return {
