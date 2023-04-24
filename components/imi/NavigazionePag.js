@@ -10,7 +10,7 @@ export default function NavigazionePag() {
                         <li><Link href="/chisiamo"><a>News e Formazione</a></Link></li>
                         <li><Link href="/news"><a>Studi e Ricerche</a></Link></li>
                         <li><Link href="/contatti"><a>Documentazione</a></Link></li>
-                        <li><Link href="/cerca"><a>Cerca nel sito</a></Link></li>
+                        <li><Link href="../pages/imi/cercaNelSito"><a>Cerca nel sito</a></Link></li>
                     </ul>
                 </nav>
             </div>

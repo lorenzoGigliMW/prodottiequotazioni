@@ -18,8 +18,9 @@ export default function Nav(){
     /></li>
         <li><Link href="/numero"><a>800.303.303</a></Link></li>
     </ul>
-</nav>
+</nav><hr />
 <div>
+
 <Image     
       src="imi.png"
       alt="cornetta"   //fill
@@ -29,15 +30,16 @@ export default function Nav(){
 
 <Image     
       src="intesasanpaolo.png"
-      alt="cornetta"   //fill
+      alt="intesaSP"   //fill
       width={300}      // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw,33vw" 
       height={300}
     />
 </div>
+<hr />
 <div>
 <Image     
       src="grafico.png"
-      alt="grafic"   //fill
+      alt="grafico"   //fill
       width={100}      // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw,33vw" 
       height={100}
     />
