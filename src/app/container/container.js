@@ -1,4 +1,4 @@
-import App from "../App";
+import _app from "../../pages" 
 import{connect} from 'react-redux';
 
 const mapStateToProps = (state) => {
@@ -15,9 +15,9 @@ const mapStateToProps = (state) => {
       getMenu:()=> dispatch(getMenu()),
       agileInstantByIndex:()=> dispatch(agileInstantByIndex()),
       agileDossierByStock:()=> dispatch(agileDossierByStock()),
-      
-      configurationCascheCleanDelete:()=>dispatch(configurationCascheCleanDelete())
+
+      configurationCacheCleanDelete:()=>dispatch(configurationCacheCleanDelete())
       
     };
   };
-  export default connect(mapStateToProps,mapDispatchToProps)(App);
+  export default connect(mapStateToProps,mapDispatchToProps)(_app);

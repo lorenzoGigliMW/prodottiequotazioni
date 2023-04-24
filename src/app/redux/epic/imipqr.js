@@ -28,7 +28,7 @@ const provaEpic = action$ => action$.pipe(
         }),
         catchError(err => of(configurationServerFetchRejected(err.message))))),
     ofType(CONFIGURATION_CACHECLEAN_DELETE),
-    mergeMap(action => from(axios.delete('http://localhost:3005/api/todo/del/:id')).pipe(
+    mergeMap(action => from(axios.delete('https://peq.marketwall.test/rest/del')).pipe(
         map(response => configurationServerFetch(response.data)),
         catchError(err => of(configurationServerFetchRejected(err.message)))))
 

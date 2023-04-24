@@ -8,6 +8,7 @@ export const CONFIGURATION_CACHECLEAN_DELETE = 'CONFIGURATION_CACHECLEAN_DELETE'
 
 
 export const actionTypes = {
+  //GET
     CONFIGURATION_SERVER_FETCH_FULFILLED,
     CONFIGURATION_SERVER_FETCH_REJECTED,
     GET_GETMENU,
@@ -18,6 +19,7 @@ export const actionTypes = {
   };
 
 // action creators
+//get
 export const  getGetMenu = () => ({
   type: GET_GETMENU
 });
@@ -40,6 +42,7 @@ export const  getAgileDossierByStock = () => ({
     err,
     error: true
   });
+  //delete
   export const configurationCacheCleanDelete = () => ({
     type: CONFIGURATION_CACHECLEAN_DELETE
 });
