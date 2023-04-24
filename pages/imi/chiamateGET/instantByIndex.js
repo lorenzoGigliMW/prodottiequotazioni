@@ -1,5 +1,6 @@
 export async function getStaticProps(props) { 
-    const res = await fetch('https://peq.marketwall.test/rest/series/instantByIndex'//?code=+{props.code}+'&language='+{props.language}
+    const res = await fetch(`https://peq.marketwall.test/rest/series/instantByIndex` 
+    //const res = await fetch('https://peq.marketwall.test/rest/series/instantByIndex'//?code=+{props.code}+'&language='+{props.language}
     );
     const data = await res.json();
     return {

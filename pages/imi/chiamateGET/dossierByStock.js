@@ -1,5 +1,6 @@
 export async function getStaticProps(props) { 
-    const res = await fetch('https://peq.marketwall.test/rest/series/dossierbystock?code='//+{props.code}+'&language='+{props.language}
+    const res = await fetch(`https://peq.marketwall.test/rest/series/dossierbystock?code=${code}&language=${language}` 
+    //const res = await fetch('https://peq.marketwall.test/rest/series/dossierbystock?code='//+{props.code}+'&language='+{props.language}
     );
     const data = await res.json();
     return {
@@ -10,8 +11,9 @@ export async function getStaticProps(props) {
 }
 
 
-export async function getStaticPaths(context) {         
-    const res = await fetch('https://peq.marketwall.test/rest/series/dossierbystock?code='//+{context.code}+'&language='+{context.language}
+export async function getStaticPaths(context) {     
+    const res = await fetch(`https://peq.marketwall.test/rest/series/dossierbystock?code=${code}&language=${language}`     
+    //const res = await fetch('https://peq.marketwall.test/rest/series/dossierbystock?code='//+{context.code}+'&language='+{context.language}
     );
     const dati = await res.json();
     const paths =dati.map(elem=>({
