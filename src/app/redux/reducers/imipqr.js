@@ -9,6 +9,8 @@ export const selectors = {
 }
 
 const initialState = {
+  code:"",
+  language:""
 };
 
 export default function reducer(state = initialState, action) {
