@@ -1,5 +1,6 @@
 export async function getStaticProps(props) { 
-    const res = await fetch('https://peq.marketwall.test/rest/menu/getmenu?language=it');//+{props.language}
+    const res = await fetch('https://peq.marketwall.test/rest/series/dossierbystock?code='//+{props.code}+'&language='+{props.language}
+    );
     const data = await res.json();
     return {
         props: {
@@ -10,7 +11,8 @@ export async function getStaticProps(props) {
 
 
 export async function getStaticPaths(context) {         
-    const res = await fetch('https://peq.marketwall.test/rest/menu/getmenu?language=it');//+{context.language}
+    const res = await fetch('https://peq.marketwall.test/rest/series/dossierbystock?code='//+{context.code}+'&language='+{context.language}
+    );
     const dati = await res.json();
     const paths =dati.map(elem=>({
         params:{language: elem.data.language}//    o     dati.language
@@ -24,12 +26,12 @@ export async function getStaticPaths(context) {
 }
 
 
-const getMenu = (props) => {
+const dossierByStock = (props) => {
     return (
         <>
-            <h1> Chiamata getMenu ....</h1>
+            <h1> Chiamata dossierByStock ....</h1>
             <p>{props.data}</p>
         </>
     );
 }
-export default getMenu;
+export default dossierByStock;
