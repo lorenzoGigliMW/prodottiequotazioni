@@ -12,7 +12,9 @@ const mapStateToProps = (state) => {
     dispatch
   ) => {
     return {
-      getMenu:()=> dispatch(getMenu()),
+      getGetMenu:()=> dispatch(getGetMenu()),
+      getAgileInstantByIndex:()=> dispatch(getAgileInstantByIndex()),
+      getAgileDossierByStock:()=> dispatch(getAgileDossierByStock()),
       agileInstantByIndex:()=> dispatch(agileInstantByIndex()),
       agileDossierByStock:()=> dispatch(agileDossierByStock()),
 
