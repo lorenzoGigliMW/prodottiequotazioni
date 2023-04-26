@@ -1,4 +1,4 @@
-export async function getStaticProps(props) { 
+export async function getStaticProps() { 
     const res = await fetch(`https://peq.marketwall.test/rest/series/dossierbystock?code=${code}&language=${language}` 
     //const res = await fetch('https://peq.marketwall.test/rest/series/dossierbystock?code='//+{props.code}+'&language='+{props.language}
     );
@@ -11,7 +11,7 @@ export async function getStaticProps(props) {
 }
 
 
-export async function getStaticPaths(context) {     
+export async function getStaticPaths() {     
     const res = await fetch(`https://peq.marketwall.test/rest/series/dossierbystock?code=${code}&language=${language}`     
     //const res = await fetch('https://peq.marketwall.test/rest/series/dossierbystock?code='//+{context.code}+'&language='+{context.language}
     );

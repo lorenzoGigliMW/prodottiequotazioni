@@ -5,6 +5,7 @@ const mapStateToProps = (state) => {
   
   return {
     //tasks:state.prova.tasks
+    data:state.data
   };
 };
 
@@ -17,6 +18,10 @@ const mapStateToProps = (state) => {
       getAgileDossierByStock:()=> dispatch(getAgileDossierByStock()),
       agileInstantByIndex:()=> dispatch(agileInstantByIndex()),
       agileDossierByStock:()=> dispatch(agileDossierByStock()),
+      getAllEvent:()=> dispatch(getAllEvent()),
+      
+      getAllNews:()=> dispatch(getAllNews()),
+      getNewsById:()=> dispatch(getNewsById()),
 
       configurationCacheCleanDelete:()=>dispatch(configurationCacheCleanDelete())
       

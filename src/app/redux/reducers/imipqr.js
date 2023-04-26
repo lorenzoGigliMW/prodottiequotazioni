@@ -9,6 +9,7 @@ export const selectors = {
 }
 
 const initialState = {
+  data:"",
   code:"",
   language:""
 };
@@ -16,19 +17,39 @@ const initialState = {
 export default function reducer(state = initialState, action) {
 
   switch (action.type) {
+    //EVENT
+    case GET_ALLEVENT:
+      return {
+        ...state,
+        data: [...state.data].filter((elem) => elem.language == action.language)
+      };
+    //MENU
     case GET_GETMENU:
       return {
-        ...state
+        ...state,
+        data: [...state.data].filter((elem) => elem.language == action.language)
       };
+      //NEWS
+      case GET_NEWSBYID:
+        return {
+            ...state,
+            data: [...state.data].filter((elem) => elem.id == action.id)
+        };
+        case GET_ALLNEWS:
+          return {
+              ...state
+          };
+      //SERIES
     case GET_AGILEINSTANTBYINDEX:
       return {
         ...state
       };
     case GET_AGILEDOSSIERBYSTOCK:
       return {
-        ...state
+        ...state,
+        data: [...state.data].filter((elem) => elem.language == action.language && elem.code==action.code)
       };
-
+////
     case CONFIGURATION_SERVER_FETCH_REJECTED:
       return {
         ...state,
@@ -38,15 +59,16 @@ export default function reducer(state = initialState, action) {
     case CONFIGURATION_SERVER_FETCH_FULFILLED:
       return {
         ...state,
-        tasks: action.data,
+        data: action.data,
         isFetching: false,
         fetchStatus: `Results from ${(new Date()).toLocaleString()}`,
         lastUpdate: action.lastUpdate
       };
+      //DELETE
       case CONFIGURATION_CACHECLEAN_DELETE:
           return {
               ...state,
-              tasks: [...state.tasks].filter((elem) => elem.id !== action.id)
+              data: [...state.data].filter((elem) => elem.id !== action.id)
           };
     default:
       return state;

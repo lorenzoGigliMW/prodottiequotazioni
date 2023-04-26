@@ -3,7 +3,7 @@ const Homepage = () => {
     return (
         <>
       <HeaderPEQ/>
-            
+      <NavigazionePag />
             <h1>Homepage ....</h1>
         </>
     );
