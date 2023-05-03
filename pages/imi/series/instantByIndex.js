@@ -1,30 +1,30 @@
-export async function getStaticProps() { 
-    const res = await fetch(`https://peq.marketwall.test/rest/series/instantByIndex` 
-    //const res = await fetch('https://peq.marketwall.test/rest/series/instantByIndex'//?code=+{props.code}+'&language='+{props.language}
-    );
-    const data = await res.json();
-    return {
-        props: {
-             data
-        }
-    }
-}
+// export async function getStaticProps() { 
+//     const res = await fetch(`https://peq.marketwall.test/rest/series/instantByIndex` 
+//     //const res = await fetch('https://peq.marketwall.test/rest/series/instantByIndex'//?code=+{props.code}+'&language='+{props.language}
+//     );
+//     const data = await res.json();
+//     return {
+//         props: {
+//              data
+//         }
+//     }
+// }
 
 
-export async function getStaticPaths() {         
-    const res = await fetch('https://peq.marketwall.test/rest/series/instantByIndex'//?code=+{context.code}+'&language='+{context.language}
-    );
-    const dati = await res.json();
-    const paths =dati.map(elem=>({
-        params:{language: elem.data.language}
-    }));
+// export async function getStaticPaths() {         
+//     const res = await fetch('https://peq.marketwall.test/rest/series/instantByIndex'//?code=+{context.code}+'&language='+{context.language}
+//     );
+//     const dati = await res.json();
+//     const paths =dati.map(elem=>({
+//         params:{language: elem.data.language}
+//     }));
 
-    return {
-        paths,
-    fallback:false
+//     return {
+//         paths,
+//     fallback:false
  
-    }
-}
+//     }
+// }
 
 
 const instantByIndex = (props) => {

@@ -1,5 +1,5 @@
-import HeaderPEQ from "../components/imi/HeaderPEQ";
-import NavigazionePag from "../components/imi/navigazionePag";
+import HeaderPEQ from "../../components/imi/HeaderPEQ";
+import NavigazionePag from "../../components/imi/NavigazionePag";
 
 const Filter = () => {
     return (

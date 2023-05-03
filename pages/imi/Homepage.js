@@ -1,9 +1,9 @@
-import HeaderPEQ from "../components/imi/HeaderPEQ";
+import HeaderPEQ from "../../components/imi/HeaderPEQ";
 const Homepage = () => {
     return (
         <>
       <HeaderPEQ/>
-      <NavigazionePag />
+     
             <h1>Homepage ....</h1>
         </>
     );

@@ -1,3 +1,4 @@
+import HeaderPEQ from "../../components/imi/HeaderPEQ"
 const Cerca = () => {
     return (
         <>

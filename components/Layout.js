@@ -1,7 +1,7 @@
 
 import Nav from './Nav';
 import Footer from './Footer';
-export default function Nav(){
+export default function Ciao(){
     return(
 <>
 <Nav />

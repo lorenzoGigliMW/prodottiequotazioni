@@ -1,4 +1,5 @@
-import HeaderPEQ from "../components/imi/HeaderPEQ";
+import HeaderPEQ from "../../components/imi/HeaderPEQ";
+import NavigazionePag from "../../components/imi/NavigazionePag";
 const Prodotti = () => {
     return (
         <>

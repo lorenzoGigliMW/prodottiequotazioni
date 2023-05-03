@@ -1,5 +1,6 @@
 import Head from 'next/head';
 const Index = () => {
+    console.log(process.env.NEXT_PUBLIC_API_BASE_URL)
     return (
         <>
         <Head>
